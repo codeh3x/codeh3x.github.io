@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>eMPlayer</title>
+        <link rel="stylesheet" href="css/lib/bootstrap-1.0.0.min.css">
+        <link rel="stylesheet" href="css/styles.css">
+        
+        <script src="js/lib/jquery-1.5.2.min.js"></script> 
+		<script src="js/lib/id3.min.js"></script>
+		<script src="js/lib/jquery.tablesorter.min.js"></script>
+		<script src="js/library.js"></script>
+		<script src="js/queue.js"></script>
+        
+        <!--[if lt IE 9]>
+            <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+		
+    </head>
+    
+    <body>
+        <header>
+            <div class="topbar">
+            <div class="container">
+            <h5><a href="#" style="color: white; font: italic bold 24px/40px Georgia, serif;">eMPlayer</a>&emsp;lightweight, browser-based music player</h5>
+                <!--
+                <h3><a href="#">Music Player</a></h3>
+                <p class="lead">A lightweight, browser-based music player for your local mp3 files.</p>
+                -->
+            </div>
+            </div>
+        </header>
+				
+        <section class="container">
+            <div class="row">
+                <div class="span8 columns">
+                </div>
+                <div class="span8 columns">
+                    <audio id="player" src="" onended="songEnd()">You aren't cool enough to use this, sorry.</audio>
+                    <div id="controls"></div>
+                </div>
+            </div>
+        </section>
+		
+		<section class="container main">
+		    <div class="row">
+		        <div class="span10 columns">
+		            <h2>Library</h2>
+		            <table id="library" class="common-table zebra-striped span10 columns">
+        		        <thead>
+        		            <th class="yellow">Title</th>
+        		            <th class="blue">Artist</th>
+        		            <th class="green">Album</th>
+        		        </thead>
+        		        <tbody id="library-body">
+		            
+        		        </tbody>
+        		    </table>
+        		</div>
+				<div class="span6 columns">
+				    <h2>Play Queue</h2>
+					<div id="queue" class="span6 columns">
+					</div>
+				</div>
+        	</div>
+        	<div class="row">
+        	    <div class="span10 columns">
+        	        <button id="addToButton" style="display:none;" class="btn primary" onclick="modalToggle();">Add more</button>
+        	    </div>
+        	    <div class="span6 columns">
+        	    
+        	    </div>
+        	</div>
+		</section>
+		
+		<section class="container">
+		    <div class="row">
+		        <div class="span8 columns">
+		            <div id="addTo" class="modal">
+		                <div class="modal-header">
+		                    <h3>Add to Library</h3>
+		                    <a href="#" onclick="modalToggle();" class="close">&times;</a>
+		                </div>
+		                <div class="modal-body">
+                            <p>Select a folder to find music (MP3 only supported) and add it to your library.</p>
+        				</div>
+        				<div class="modal-footer">
+    						<input type="file" multiple="" webkitdirectory="true" onchange="indexFiles(this.files)" />
+        				</div>
+		            </div>
+		        </div>
+		    </div>
+		    
+		</section>
+        
+        <footer>
+            <div class="container">
+                <p class="signature"><span class="f-left"><code style="color: Blue; font: italic bold 12px/30px Georgia, serif;"> eMPlayer &copy; 2018 </code></span><img src="images/chrome.jpg" class="f-right" alt="Built for Chrome" height="25" width="25" title="Built for Chrome" /></p>
+            </div>
+        </footer>
+        <script type="text/javascript"> 
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-6428376-2']);
+            _gaq.push(['_trackPageview']);
+ 
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script> 
+    </body>    
+</html>
