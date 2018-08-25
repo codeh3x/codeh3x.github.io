@@ -1,0 +1,139 @@
+h2 {
+    margin:10px 0;
+}
+
+.a-right { text-align:right;}
+.a-center { text-align:center;}
+.a-left { text-align:left;}
+
+.f-right { float:right;}
+.f-left { float:left; }
+
+.topbar .lead {
+    float:left;
+    color: #BFBFBF;
+    margin:10px 40px;
+}
+
+#library { width:95%; }
+#library tbody tr { cursor:pointer; }
+#addToButton {
+    margin:0 35%;
+    width:200px;
+}
+    
+footer .container {
+    margin-bottom:60px;
+    margin-top:20px;
+}
+
+footer .signature {
+    border-top:2px solid #222;
+    padding-top:10px;
+}
+
+footer .signature span {
+    margin-top:5px;
+}
+
+section.main { min-height:700px; margin-top:50px;}
+
+#controls { 
+	position: fixed;
+	bottom:0px;
+	right:0px;
+	border: 2px solid #222; 
+	background-color: #222; 
+	width: 100%; 
+	height: 30px;
+	line-height: 30px;
+}
+audio#player1 { 
+	border: 2px solid #FFFFFF; /* masked against background until audio has focus */
+}
+#controls input { 
+	border: 2px solid #222; /* masked against background until input has focus*/
+	background-position: center center;
+	background-repeat: no-repeat;
+	float:left;
+}
+audio#player1:focus, audio#player1:active, audio#player1:hover, 
+input:focus, input:hover, input:active { 
+	border-color: white !important; /* yellow */
+}
+input#playpause {
+	width: 34px;
+	height: 30px;
+	background-color: transparent;
+	background-image: url('../images/audio_play.gif');
+	color: transparent;
+	border-right-color: #222;
+	margin-left:10px;
+}
+#seekBar {
+	width: 200px;
+	height: 26px;
+	margin:2px 10px;
+}
+input#seekBack {
+	width: 34px;
+	height: 30px;
+	background-color: transparent;
+	background-image: url('../images/audio_rewind.gif');
+	color: transparent;
+}
+input#seekForward {
+	width: 34px;
+	height: 30px;
+	background-color: transparent;
+	background-image: url('../images/audio_forward.gif');
+	color: transparent;
+}
+span#timer { /* contains both span#currentTime and span#duration */
+	width: 80px;
+	margin-left:20px;
+	color: #ffffff;
+	float:left;
+}
+input#muteButton { 
+	width: 34px;
+	height: 30px;
+	background-color: transparent;
+	background-image: url('../images/audio_volume.gif');
+	color: transparent;
+	border-left-color: #222; 
+}
+input#volumeUp { 
+	width: 34px;
+	height: 30px;
+	background-color: transparent;
+	background-image: url('../images/audio_volumeUp.gif');
+	color: transparent;
+}
+input#volumeDown { 
+	top: 0px;
+	left: 475px;
+	width: 34px;
+	height: 30px;
+	background-color: transparent;
+	background-image: url('../images/audio_volumeDown.gif');
+	color: transparent;
+}
+
+span#nowplaying { 
+    float:right;
+    margin-right:50px;
+    color:white;
+}
+.offscreen { 
+	position:absolute;
+	left:-10000px;
+	top:auto;
+	width:1px;
+	height:1px;
+	overflow:hidden;
+}
+
+audio#player1 { 
+	height: 1px;
+}
